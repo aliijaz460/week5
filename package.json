@@ -1,0 +1,22 @@
+{
+    "name": "rbac-app",
+    "version": "1.0.0",
+    "description": "Role-Based Access Control with Testing and API Documentation",
+    "main": "app.js",
+    "scripts": {
+      "test": "mocha"
+    },
+    "dependencies": {
+      "express": "^4.x.x",
+      "jsonwebtoken": "^8.x.x",
+      "swagger-ui-express": "^4.x.x"
+    },
+    "devDependencies": {
+      "chai": "^4.x.x",
+      "mocha": "^9.x.x",
+      "supertest": "^6.x.x"
+    },
+    "author": "",
+    "license": "ISC"
+  }
+  

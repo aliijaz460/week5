@@ -1,0 +1,66 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "RBAC API",
+      "version": "1.0.0",
+      "description": "API documentation for role-based access control (RBAC)"
+    },
+    "host": "localhost:3000",
+    "basePath": "/",
+    "schemes": ["http"],
+    "paths": {
+      "/login": {
+        "post": {
+          "summary": "Login to get a JWT token",
+          "parameters": [
+            {
+              "name": "body",
+              "in": "body",
+              "required": true,
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "username": { "type": "string" }
+                }
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "JWT token returned"
+            },
+            "404": {
+              "description": "User not found"
+            }
+          }
+        }
+      },
+      "/admin": {
+        "get": {
+          "summary": "Access admin resources",
+          "responses": {
+            "200": {
+              "description": "Welcome Admin"
+            },
+            "403": {
+              "description": "Access Denied"
+            }
+          }
+        }
+      },
+      "/user": {
+        "get": {
+          "summary": "Access user resources",
+          "responses": {
+            "200": {
+              "description": "Welcome User"
+            },
+            "403": {
+              "description": "Access Denied"
+            }
+          }
+        }
+      }
+    }
+  }
+  
